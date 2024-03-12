@@ -1,0 +1,15 @@
+CREATE TABLE users (
+    id INTEGER PRIMARY KEY,
+    username TEXT UNIQUE NOT NULL,
+    password TEXT NOT NULL
+);
+
+INSERT INTO users (username, password) VALUES ('example_user', 'hashed_password_here');
+
+
+CREATE TABLE IF NOT EXISTS Run (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    date TEXT NOT NULL,
+    miles REAL NOT NULL,
+    pace REAL NOT NULL
+);
